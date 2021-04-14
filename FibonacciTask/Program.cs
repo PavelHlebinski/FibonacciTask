@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace FibonacciTask
 {
@@ -6,9 +7,7 @@ namespace FibonacciTask
     {
         static void Main(string[] args)
         {
-            Calculate.FibAsync(5);
-            Calculate.FibAsync(7);
-            Calculate.FibAsync(9);
+            Parallel.For(1, 6, Calculate.FibParallel);
             Console.ReadKey();
         }
     }

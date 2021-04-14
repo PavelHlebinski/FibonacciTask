@@ -17,9 +17,9 @@ namespace FibonacciTask
             }
         }
 
-        public static async void FibAsync(int n)
+        public static void FibParallel(int i)
         {
-            Console.WriteLine($"Fibonacci number {n} is {await Task.Run(() => Fib(n))}");
+            Console.WriteLine($"Task number: {Task.CurrentId}, Fibonacci number {i} is {Fib(i)}");
         }
     }
 }
